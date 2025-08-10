@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-times"></i>
+                    <i class="far fa-circle"></i>
+                </div>
+                <div class="logo-text">Tic Tac Toe</div>
+            </div>
+            <p class="subtitle">Play with a friend or challenge the computer</p>
+        </header>
+
+        <main class="content">
+            <aside class="settings-panel">
+                <div class="panel-title">Game Settings</div>
+                
+                <div class="option-group">
+                    <label class="option-label">Game Mode</label>
+                    <div class="btn-group">
+                        <button class="btn active" id="player-mode">Player vs Player</button>
+                        <button class="btn" id="computer-mode">Player vs Computer</button>
+                    </div>
+                </div>
+
+                <!-- Difficulty group will only be shown in JS for computer mode -->
+                <div class="option-group" id="difficulty-group" style="display:none;">
+                    <label class="option-label">Difficulty</label>
+                    <div class="btn-group">
+                        <button class="btn" data-level="easy">Easy</button>
+                        <button class="btn active" data-level="medium">Medium</button>
+                        <button class="btn" data-level="hard">Hard</button>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <label class="option-label">Your Symbol</label>
+                    <div class="btn-group">
+                        <button class="btn active" data-symbol="X">X</button>
+                        <button class="btn" data-symbol="O">O</button>
+                    </div>
+                </div>
+                <div id="endgame-modal" class="modal">
+                    <div class="modal-content">
+                        <h2>Game Over!</h2>
+                        <p>Do you want to restart with the same settings or reset the game?</p>
+                        <div class="modal-buttons">
+                            <button class="btn success" id="modal-restart">Restart</button>
+                            <button class="btn warning" id="modal-reset">Reset</button>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <button class="btn success" id="start-btn">Start New Game</button>
+            </aside>
+
+            <section class="game-panel">
+                <div class="status" id="status">Select settings and start the game!</div>
+                <div class="board" id="board">
+                    <div class="cell" data-index="0"></div>
+                    <div class="cell" data-index="1"></div>
+                    <div class="cell" data-index="2"></div>
+                    <div class="cell" data-index="3"></div>
+                    <div class="cell" data-index="4"></div>
+                    <div class="cell" data-index="5"></div>
+                    <div class="cell" data-index="6"></div>
+                    <div class="cell" data-index="7"></div>
+                    <div class="cell" data-index="8"></div>
+                </div>
+                <div class="controls">
+                    <button class="btn warning" id="restart-btn">Restart Game</button>
+                    <button class="btn" id="reset-btn">Reset All</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Designed with ❤️ | Tic Tac Toe v1.0 | <span class="highlight-text">Player vs Player</span> mode</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
