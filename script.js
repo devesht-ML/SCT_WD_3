@@ -91,7 +91,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (gameState.gameMode === 'computer' && gameState.playerSymbol === 'O') {
             setTimeout(computerMove, 500);
         }
+    
+        // Scroll to game panel
+        document.querySelector('.game-panel').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
     }
+    
 
     function restartGame() {
             startNewGame();
