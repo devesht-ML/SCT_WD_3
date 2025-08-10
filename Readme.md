@@ -1,5 +1,4 @@
 # Elegant Tic Tac Toe
-Description:
 An interactive and modern Tic Tac Toe game built using HTML, CSS, and JavaScript with a sleek, responsive UI.
 Play against a friend (Player vs Player) or challenge the computer (Player vs Computer) with adjustable difficulty levels.
 
@@ -54,5 +53,5 @@ iii)- Sound effects for moves & wins
 Licensed under the MIT License — free to use, modify, and distribute.
 
 # Contribution
-COntribution and new ideas are open for this repository.
+Contribution and new ideas are open for this repository.
 
